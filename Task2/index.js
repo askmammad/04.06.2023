@@ -10,12 +10,13 @@ async function printFunc(jsonData) {
   let followers_number = document.getElementById("followers_number");
   let following_number = document.getElementById("following_number");
   let bio = document.getElementById("bio");
+  let image = document.getElementById("profile_image");
+  image.src = jsonData.avatar_url;
   name.innerHTML = jsonData.name;
   username.innerHTML = jsonData.login;
   followers_number.innerHTML = jsonData.followers;
   following_number.innerHTML = jsonData.following;
   bio.innerHTML = jsonData.bio;
-
 }
 
 let infoData = "https://api.github.com/users/askmammad";
